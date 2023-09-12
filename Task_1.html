@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Landing Page</title>
+    <style>
+    * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: white;
+	color: rgb(34, 125, 102);
+	font-family: "Fira Sans", sans-serif;
+}
+nav {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 5%;
+	background-color: #a0ebcf;
+}
+
+nav .heading {
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav ul li {
+	padding: 8px 15px;
+	border-radius: 10px;
+	transition: 0.2s ease-in;
+}
+
+nav ul li a {
+	color: black;
+	font-size: 20px;
+	font-weight: 500;
+	text-decoration: none;
+	color: white;
+}
+
+nav ul li:hover {
+	background-color: rgb(20, 171, 98);
+}
+
+nav ul li a:hover {
+	color: white;
+}
+
+nav .sideMenuButton {
+	font-size: 30px;
+	font-weight: bolder;
+	cursor: pointer;
+	display: none;
+}
+
+.line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2% 5%;
+}
+
+.line .side1 {
+	padding-right: 50px;
+}
+
+.side1 h1 {
+	font-size: 60px;
+	margin-bottom: 20px;
+	color: rgb(8, 151, 96);
+}
+
+.side1 button {
+	width: 200px;
+	padding: 12px 20px;
+	border-radius: 20px;
+	border-style: none;
+	color: black;
+	font-size: 17px;
+	font-weight: 600;
+    padding-bottom: 5px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/* section */
+
+section .topic a {
+	font-size: 25px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.about .boxes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about .boxes .box {
+	margin: 10px 20px;
+	max-width: calc(100% / 3 - 50px);
+	text-align: center;
+	border-radius: 12px;
+	padding: 30px 10px;
+	box-shadow: 0 5px 10px rgba(95, 214, 166, 0.12);
+	cursor: default;
+    background-color: #6df9d196;
+}
+
+/* Contact Page */
+
+.contact {
+	padding: 20px;
+    
+}
+
+.contact .content {
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
+.content .title {
+	width: 80%;
+	text-align: left;
+	font-weight: bolder;
+	font-size: 40px;
+    padding-left: 80px;
+}
+
+.input1{
+    background-color: #93dfca;
+    padding: 20px 20px;
+    border-radius: 20px;
+}
+.title {
+	margin-bottom: 30px;
+	margin-left: 80px;
+}
+
+.contactMenu {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.input2 {
+	margin-top: 10;
+}
+
+.label1 {
+	font-size: 18px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-weight: bolder;
+}
+
+.contactMenu .input1 input {
+	border-radius: 13px;
+	padding: 6px;
+}
+
+.input2 input {
+	border-color: rgb(252, 244, 244);
+	width: 400px;
+}
+
+.button {
+	margin-top: 12px;
+	margin-left: 5px;
+}
+
+.button button {
+	width: 162px;
+	height: 35px;
+	border-radius: 12px;
+	border-color: transparent;
+}
+
+.button button:hover {
+	background-color: #5bb572;
+}
+
+button {
+	width: 162px;
+	height: 35px;
+	border-radius: 20px;
+	border-color: transparent;
+}
+
+button:hover {
+	background-color: #8cc099;
+}
+
+.rightside1 {
+	display: flex;
+	flex-direction: column;
+	margin-left: 200px;
+    margin-right: 50px;
+}
+
+.title1 {
+	font-size: 18px;
+	margin-top: 8px;
+	margin-bottom: 5px;
+	font-weight: bolder;
+}
+
+.content1 {
+	width: 450px;
+	margin-top: 2px;
+	color: rgb(75, 114, 96);
+}
+
+/* Footer */
+footer {
+	background-color: #9de0c9;
+	padding: 15px 0;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+}
+
+footer .footer span {
+	font-size: 17px;
+	font-weight: 400;
+	color: black;
+}
+
+footer .footer span a {
+	font-weight: 500;
+	color: var(--white-color);
+}
+</style>
+</head>
+
+<body>
+	<nav>
+		<div class="heading">Cherish</div>
+		<!--span class="sideMenuButton"
+			onclick="openNavbar()">
+		</span-->
+
+		<div class="navbar">
+			<ul>
+				<li><a href="#Home">Home</a></li>
+				<li><a href="#My Projects">About</a></li>
+				<li><a href="#contact">Sign Up</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Side navigation bar for
+		responsive website -->
+	<!--div class="sideNavigationBar"
+		id="sideNavigationBar">
+		<a href="#" class="closeButton"
+			onclick="closeNavbar()">
+			
+		</a>
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Sign Up</a>
+	</div-->
+
+	<!-- Content -->
+	<div class="line" id="Home">
+		<div class="side1">
+			<h1>Event Managers</h1>
+			<button>
+				<a href="#">
+					Explore More
+				</a>
+			</button>
+		</div>
+		<div class="side2">
+			<img src=
+"data:image/jpeg;base64,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"
+				width="500">
+		</div>
+	</div>
+
+	<section class="about" id="My Projects">
+		<div class="content">
+			<div class="title">
+				<span>Events</span>
+			</div>
+			<div class="boxes">
+				<div class="box">
+					<div class="topic">
+						<a href=""">
+							Birthday
+						</a>
+					</div>
+					<p>
+                        coordinate, organize, and execute all kinds of special events. work in a variety of fields, handling all aspects of weddings, birthday parties, anniversaries, or corporate gatherings.
+					</p>
+				</div>
+				<div class="box">
+
+					<div class="topic">
+						<a href="">
+							Marriage
+						</a>
+					</div>
+					<p>
+						Weddings are significant events in people's lives and as such, couples are often willing to spend considerable amount of money to ensure that their weddings are well-organized.
+					</p>
+				</div>
+
+				<div class="box">
+					<div class="topic">
+						<a href="">
+							Get Together Parties
+						</a>
+					</div>
+					<p>
+						The first step in planning a get-together party is to create a guest list and send out invitations. You can send invitations via email or through social media.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact" id="contact">
+		<div class="content">
+			<div class="title"><span>Sign Up</span></div>
+			<div class="contactMenu">
+				<div class="input1">
+					<div class="label1">Your Name</div>
+					<div class="input2">
+						<input type="text"
+							placeholder="Enter your Name here">
+					</div>
+					<div class="label1">
+						<label>Your Email</label>
+					</div>
+					<div class="input2">
+						<input type="text"
+							placeholder="Enter your Email here">
+					</div>
+					<div class="label1">
+						<label>Your Password</label>
+					</div>
+					<div class="input2">
+						<input type="text"
+							placeholder="Enter your Password here">
+					</div>
+					<div class="button">
+						<button>Sign Up</button>
+					</div>
+				</div>
+				<div class="input3">
+					<div class="rightside1">
+						<div class="title1">
+							<span>
+								Contact Us
+							</span>
+						</div>
+						<div class="content1">
+							A-143, 9th Floor, Sovereign
+							Corporate Tower, Sector-136,
+							Noida, Uttar Pradesh - 201305
+						</div>
+                        <br>
+                        <div class="content1">
+							Email:cherish678@gmail.com
+						</div>
+                        <br>
+                        <div class="content1">
+							Ph:77364362
+						</div>
+
+						<div class="title1">
+							<span>More Information</span>
+						</div>
+						<div class="content1">
+                            Company is a professional service that specializes in planning, organizing, and executing various events on behalf of its clients. The company may specialize in a particular type of event, such as weddings or corporate events, or they may offer a variety of event planning services,coordinating all of the moving parts involved in ensuring events go smoothly, including choosing venues, catering services, and hiring performers.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer section -->
+	<footer>
+		<div class="footer">
+			<span>Created By <a href="#">Cherish</a></span>
+		</div>
+	</footer>
+</body>
+</html>
